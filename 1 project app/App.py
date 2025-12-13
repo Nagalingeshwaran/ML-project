@@ -8,7 +8,7 @@ st.title("💼 Salary Prediction App")
 
 @st.cache_resource
 def load_model():
-    return joblib.load("model.pkl")
+    return joblib.load("Salary_pre_linear_reg_model.pkl")
 
 model = load_model()
 
@@ -22,5 +22,6 @@ experience = st.number_input(
 if st.button("Predict Salary"):
     prediction = model.predict([[experience]])
     st.success(f"💰 Predicted Salary: ₹ {prediction[0]:,.2f}")
+
 
 

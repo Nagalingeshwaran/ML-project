@@ -22,4 +22,3 @@ experience = st.number_input(
 if st.button("Predict Salary"):
     prediction = model.predict([[experience]])
     st.success(f"💰 Predicted Salary: ₹ {prediction[0]:,.2f}")
-

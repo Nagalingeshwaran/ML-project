@@ -9,8 +9,8 @@ st.title("💼 Salary Prediction App")
 @st.cache_resource
 def load_model():
     return joblib.load("Salary_pre_linear_reg_model.pkl")
+model = load_model("salary_prediction/Salary_pre_linear_reg_model.pkl")
 
-model = load_model("Salary_pre_linear_reg_model.pkl")
 
 experience = st.number_input(
     "Enter Years of Experience",
